@@ -30,7 +30,7 @@ S3Store.prototype.save = function(image) {
           bucket: options.bucket,
           region: options.region
         });
-
+        console.log(s3, options);
         return nodefn.call(s3.putObject.bind(s3), {
             ACL: 'public-read',
             Bucket: options.bucket,
